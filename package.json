@@ -1,0 +1,12 @@
+{
+  "name": "headless-func",
+  "version": "1.0.0",
+  "description": "lawd help me ",
+  "main": "index.js",
+  "author": "Mykel Koded <koded@ixit.com.ng>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "puppeteer": "1.12.2"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get", "post"]
+    },
+    {
+      "name": "pageCookiesIn",
+      "type": "cosmosDB",
+      "partitionKey": "/ig_username/{username}",
+      "databaseName": "Sessions",
+      "collectionName": "Cookies",
+      "connectionStringSetting": "COSMOS_ONE",
+      "direction": "in"
+    },
+    {
+      "name": "pageCookiesOut",
+      "type": "cosmosDB",
+      "databaseName": "Sessions",
+      "collectionName": "Cookies",
+      "partitionKey": "/ig_username/{username}",
+      "createIfNotExists": true,
+      "connectionStringSetting": "COSMOS_ONE",
+      "direction": "out"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
